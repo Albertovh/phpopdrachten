@@ -94,7 +94,7 @@
             echo ("je mag hier sterke en zwakke drank drinken");
         }
 
-        else if ($countryname == "bulgarije" && $currentage >=18)
+         else if ($countryname == "bulgarije" && $currentage >=18)
         {
             echo("je mag hier sterke drank drinken");
         }
@@ -102,7 +102,32 @@
             {
             echo("hier mag je geen alcohol drinken");
         }
-         ?>
+
+          else if ($countryname == "Cyprus" && $currentage >=17)
+        {
+            echo("je mag hier sterke drank drinken");
+        }
+        else
+            {
+            echo("hier mag je geen alcohol drinken");
+        }
+               else if ($countryname == "Nederland" && $currentage >=18)
+        {
+            echo("je mag hier sterke drank drinken");
+        }
+        else
+            {
+            echo("hier mag je geen alcohol drinken");
+        }
+        else if ($countryname == "Zweden" && $currentage >= 18 && $currentage < 20)
+        {
+            echo ("je mag hier zwakke alcohol drinken");
+        }
+        else if ($countryname == "Zweden" && $currentage >= 20 )
+        {
+            echo ("je mag hier sterke en zwakke drank drinken");
+        }
+        ?>
     </main>
 </body>
 </html>
