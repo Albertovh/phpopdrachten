@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php
-include("../includes/header.php");
+include("includes/header.php");
 ?>
 <aside>
     <h2>Menu</h2>
@@ -52,10 +52,10 @@ include("../includes/header.php");
                     <a href="#">Opdracht 4.2</a>
                 </li>
                 <li>
-                    <a href="hoofdstuk%204/opdracht4.3.php">Opdracht 4.3</a>
+                    <a href="#">Opdracht 4.3</a>
                 </li>
                 <li>
-                    <a href="hoofdstuk%204/opdracht4.4.php">Opdracht 4.4</a>
+                    <a href="#">Opdracht 4.3</a>
                 </li>
             </ul>
         </li>
@@ -81,80 +81,35 @@ include("../includes/header.php");
 
 <main id="wrapper">
     <h2>Uitwerkingen</h2>
-
-    <?php
-    for ($day = 0; $day <7 ; $day++)
-    {
-        $datenumber = strtotime("+$day days");
-        $daynumber = date('w', $datenumber);
-        if ($daynumber == 0)
-        {
-            $dayname = 'zondag';
-        }
-        elseif ($daynumber == 1)
-        {
-            $dayname = 'maandag';
-        }
-        elseif ($daynumber == 2)
-        {
-            $dayname = 'dinsdag';
-        }
-        elseif ($daynumber == 3)
-        {
-            $dayname = 'woensdag';
-        }
-        elseif ($daynumber == 4)
-        {
-            $dayname = 'donderdag';
-        }
-        elseif ($daynumber == 5)
-        {
-            $dayname = 'vrijdag';
-        }
-        elseif ($daynumber == 6)
-        {
-            $dayname = 'zaterdag';
-        }
-
-        echo "Dag ";
-        echo date('w', $datenumber);
-        echo " is " . $dayname;
-        echo " ";
-        echo date('d-m-Y', $datenumber);
-        echo "<br>";
-    }
-    ?>
-
 </main>
+<h3>huisarts bezoek formulier</h3>
+<form action="instrucute_hoofdstuk5.php" method="get">
+    <p>voornaam<</p>
+    <input type="text" name="firstname">
 
-<style>
-    header, footer
-    {
-        text-align: right;
-        background-color: #F0F8FF;
-        width: 98%;
-        padding: 15px;
-        color: black;
-    }
-    aside
-    {
-        background-color: #F5F5DC;
-        display: inline-block;
-        float: left;
-        width: 50%;
-    }
+    <p>achternaam</p>
+    <input type="text" name="lastname">
 
-    #wrapper
-    {
-        display: inline-block;
-        float: right;
-        width: 50%;
-        background-color: white;
-    }
+    <p>geboortedatum</p>
+    <input type="date" name="birthdate">
 
-</style>
+    <p>klachten</p>
+    <textarea name="disseasecomplaints"></textarea>
+
+<input type="submit" value="verzenden">
+</form>
+
+<?php
+include("includes/footer.php");
+//bepalen of er een formulier verzonden is
+if(empty($_GET) == false)
+{
+    //er is een formulier verzonden doe iets met de invoer van de gebruiker
+    $userFirstName = $_GET["firstname"];
+    echo("<h1>opgegeven naam:". $userFirstName . "</h1>");
+}
+?>
+
+
 </body>
 </html>
-
-
-

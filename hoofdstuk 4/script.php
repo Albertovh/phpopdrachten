@@ -49,13 +49,11 @@ $task6 = $task6."in " . $countertask6. " was ik " . $secondcounter6 . " jaar oud
 
 
 
-
-for($task6 = "";$countertask6= 2020;$secondcounter6 = 18 $countertask6 <= 2020 && $secondcounter6 <= 18;)
+$task6 = "";
+$secondcounter6 = 18;
+for( $countertask6= 2020; $countertask6 >= 2002 && $secondcounter6 >= 0;  $countertask6--)
 {
-
-    $countertask6--;
     $secondcounter6--;
-
 
 }
 $task6 = $task6."in " . $countertask6. " was ik " . $secondcounter6 . " jaar oud en werd ik een adolescent";

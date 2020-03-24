@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php
-include("../includes/header.php");
+include("includes/header.php");
 ?>
 <aside>
     <h2>Menu</h2>
@@ -81,52 +81,11 @@ include("../includes/header.php");
 
 <main id="wrapper">
     <h2>Uitwerkingen</h2>
-
-    <?php
-    for ($day = 0; $day <7 ; $day++)
-    {
-        $datenumber = strtotime("+$day days");
-        $daynumber = date('w', $datenumber);
-        if ($daynumber == 0)
-        {
-            $dayname = 'zondag';
-        }
-        elseif ($daynumber == 1)
-        {
-            $dayname = 'maandag';
-        }
-        elseif ($daynumber == 2)
-        {
-            $dayname = 'dinsdag';
-        }
-        elseif ($daynumber == 3)
-        {
-            $dayname = 'woensdag';
-        }
-        elseif ($daynumber == 4)
-        {
-            $dayname = 'donderdag';
-        }
-        elseif ($daynumber == 5)
-        {
-            $dayname = 'vrijdag';
-        }
-        elseif ($daynumber == 6)
-        {
-            $dayname = 'zaterdag';
-        }
-
-        echo "Dag ";
-        echo date('w', $datenumber);
-        echo " is " . $dayname;
-        echo " ";
-        echo date('d-m-Y', $datenumber);
-        echo "<br>";
-    }
-    ?>
-
 </main>
 
+<?php
+include("includes/footer.php");
+?>
 <style>
     header, footer
     {
@@ -153,8 +112,6 @@ include("../includes/header.php");
     }
 
 </style>
+
 </body>
 </html>
-
-
-

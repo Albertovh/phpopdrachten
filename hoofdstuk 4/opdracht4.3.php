@@ -1,52 +1,135 @@
 <?php
 /**
- * User: alberto
- * Date: 17-02-2020
- * Time: 17-17
- * File: opdracht2.1.php
+ * User: alberto van hoek
+ * Date: 11-2-2020
+ * Time: 12:09 PM
+ * File: index.php
  */
 ?>
-
 <html>
-
 <head>
-    <meta name="description" content=" ">
-    <meta name="keywords" content=" ">
-    <link rel="icon" href="../CSS/style.css" />
-    <meta charset="utf-8">
-    <title>
-
-    </title>
+    <title>Mij PHP opdrachten</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
-
-<header>
-    <h1><?php echo "Uitwerking van PHP-opdrachten"; ?></h1>
-</header>
 <body>
 <?php
-include("script.php");
-echo $task2;
+include("../includes/header.php");
 ?>
-<br>
-<?php
-echo $task3;
-?>
-<br>
-<?php
-echo $task4 ;
-?>
-<br>
-<?php
-echo "<table>". "<tr>".$task5 ."<br>"."</tr>". "</table>";
-?>
-<br>
-<?php
-echo "<p>".$task6."</p>"
-?>
+<aside>
+    <h2>Menu</h2>
+    <ul>
+        <li>Hoofdstuk 2
+            <ul>
+                <li>
+                    <a href="../../hoofdstuk2/opdracht2.1.php">Opdracht 2.1</a>
+                </li>
+                <li>
+                    <a href="../../hoofdstuk2/opdracht2.2.php"">Opdracht 2.2</a>
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>Hoofdstuk 3
+            <ul>
+                <li>
+                    <a href="../../hoofdstuk3/opdrach3.1.php">Opdracht 3.1</a>
+                </li>
+                <li>
+                    <a href=../../hoofdstuk3/opdracht3.2.php.php">Opdracht 3.2</a>
+                </li>
+                <li>
+                    <a href="../../hoofdstuk3//opdracht3.3.php">Opdracht 3.3</a>
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>Hoofdstuk 4
+            <ul>
+                <li>
+                    <a href="#">Opdracht 4.1</a>
+                </li>
+                <li>
+                    <a href="#">Opdracht 4.2</a>
+                </li>
+                <li>
+                    <a href="hoofdstuk%204/opdracht4.3.php">Opdracht 4.3</a>
+                </li>
+                <li>
+                    <a href="hoofdstuk%204/opdracht4.4.php">Opdracht 4.4</a>
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>Hoofdstuk 5
+            <ul>
+                <li>
+                    <a href="#">Opdracht 5.1</a>
+                </li>
+                <li>
+                    <a href="#">Opdracht 5.2</a>
+                </li>
+                <li>
+                    <a href="#">Opdracht 5.3</a>
+                </li>
+                <li>
+                    <a href="#">Opdracht 5.4</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+
 <main id="wrapper">
     <h2>Uitwerkingen</h2>
 
+    <?php
+    include("script.php");
+    echo $task2;
+    ?>
+    <br>
+    <?php
+    echo $task3;
+    ?>
+    <br>
+    <?php
+    echo $task4 ;
+    ?>
+    <br>
+    <?php
+    echo "<table>". "<tr>".$task5 ."<br>"."</tr>". "</table>";
+    ?>
+    <br>
+    <?php
+    echo "<p>".$task6."</p>"
+    ?>
+
 </main>
+
+<style>
+    header, footer
+    {
+        text-align: right;
+        background-color: #F0F8FF;
+        width: 98%;
+        padding: 15px;
+        color: black;
+    }
+    aside
+    {
+        background-color: #F5F5DC;
+        display: inline-block;
+        float: left;
+        width: 50%;
+    }
+
+    #wrapper
+    {
+        display: inline-block;
+        float: right;
+        width: 50%;
+        background-color: white;
+    }
+
+</style>
 </body>
 </html>

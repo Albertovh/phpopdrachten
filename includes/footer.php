@@ -1,6 +1,6 @@
 <?php
-include ("variabelen.php")
-echo("<div class='footer'>");
+include ("variabelen.php");
+echo("<div>");
 echo ("&copy;" . $year);
 echo ("</div>");
 
